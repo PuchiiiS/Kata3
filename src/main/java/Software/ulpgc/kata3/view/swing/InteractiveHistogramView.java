@@ -1,4 +1,4 @@
-package Software.ulpgc.kata3.view;
+package Software.ulpgc.kata3.view.swing;
 
 import Software.ulpgc.kata3.model.MovieRating;
 import Software.ulpgc.kata3.model.TsvFileRatingReader;

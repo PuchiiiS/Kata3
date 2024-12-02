@@ -2,7 +2,7 @@ package Software.ulpgc.kata3.control;
 
 import Software.ulpgc.kata3.model.MovieRating;
 import Software.ulpgc.kata3.model.TsvFileRatingReader;
-import Software.ulpgc.kata3.view.HistogramView;
+import Software.ulpgc.kata3.view.swing.InteractiveHistogramView;
 
 import java.io.File;
 import java.util.HashMap;
@@ -19,9 +19,8 @@ public class Main {
             histogram.put(roundedRating, histogram.getOrDefault(roundedRating, 0) + 1);
         }
 
-        HistogramView view = new HistogramView();
-        int scaleFactor = 3000;
-        view.renderHistogram(histogram, scaleFactor);
+        InteractiveHistogramView interactiveHistogramView = new InteractiveHistogramView();
+        interactiveHistogramView.renderHistogram(histogram, file);
     }
 }
 
